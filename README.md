@@ -2,6 +2,8 @@
 
 Ein schnelles, browserbasiertes Feuerwehr-Minispiel, bei dem du unter Zeitdruck die richtigen Schläuche mit den passenden Kupplungen verbinden musst. Das Spiel ist vollständig in **HTML, CSS und JavaScript** umgesetzt – ohne Frameworks.
 
+Das Projekt dient als Beispiel, wie man so ein Minigame umsetzen kann. Dies sieht man alleine an den noch enthaltenden A B C Buchsteben in der Sprite Datei
+
 ---
 
 ## 🎯 Ziel des Spiels
