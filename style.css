@@ -1,0 +1,107 @@
+/* === Grundlayout & Hintergrund === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Overlay Container === */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* === Spiel-Inhalte === */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#timer {
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* === Flex-Bereiche für Schläuche & Kupplungen === */
+.hoses, .targets, .badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.source, .target {
+  width: 100px;
+  height: 100px;
+  background-image: url("assets/hoses.png");
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  cursor: grab;
+}
+
+/* Feedback */
+#feedback {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* === Badges (responsive) === */
+.badge {
+  width: 80px;
+  height: 78px;
+  background-image: url("assets/badges.png");
+  background-repeat: no-repeat;
+  background-size: 336px 102px; /* skaliert passend für 4x kleinere Ansicht */
+}
+.badge.fast    { background-position-x: 0; }
+.badge.perfect { background-position-x: -84px; }
+.badge.first   { background-position-x: -168px; }
+.badge.score   { background-position-x: -252px; }
+
+/* === Responsive Anpassungen === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #timer {
+    font-size: 1.2rem;
+  }
+
+  .source, .target {
+    width: 80px;
+    height: 80px;
+    background-size: 240px 160px;
+  }
+
+  .badge {
+    width: 60px;
+    height: 59px;
+    background-size: 252px 76.5px;
+    background-position-y: 0;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+}
